@@ -11,7 +11,7 @@ class Command{
     public:
         Command(){};
         virtual double execute(Op_Val_Pair_List& args) = 0;
-        virtual ~Command(){};
+        ~Command(){};
 };
 
 #endif //COMMAND_HPP

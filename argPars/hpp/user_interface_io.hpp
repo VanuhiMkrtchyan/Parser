@@ -9,7 +9,7 @@ class User_Interface_IO : public User_Interface
 {
     public:
         User_Interface_IO() {};
-        
+        ~User_Interface_IO(){};
     public:
         std::string getInput() override;
         void displayOutput(const double& msg);

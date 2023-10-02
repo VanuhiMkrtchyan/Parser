@@ -7,6 +7,7 @@
 
 // #include "command.hpp"
 #include "child_commands.hpp"
+//#include "shape_commands.hpp"
 
 using CmdRegistry = std::map<std::string, Command*>;
 

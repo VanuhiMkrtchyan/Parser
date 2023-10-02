@@ -7,7 +7,7 @@ CommandRegistry::CommandRegistry(){
     command_registry["Div"] = new DivCommand();
     command_registry["Exit"] = new Exit();
     command_registry["Help"] = new Help();
-
+   // command_registry["Square"] = new Square();
 }
 
 CommandRegistry::~CommandRegistry(){
@@ -26,10 +26,3 @@ Command* const CommandRegistry::operator[](const std::string cmd)
 {
     return command_registry[cmd];
 }
-
-/*
-Add->
-        commandRegistry["Add"]-->execute(operands)
-
-
-*/

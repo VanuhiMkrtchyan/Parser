@@ -34,7 +34,9 @@ std::string Parser::make_command(const TokensType token, Op_Val_Pair_List& Op_Va
         return command;
     }
     catch(...){
-        std::cout << "No such command or wrong arguments " << std::endl;
+        //std::cout << "No such command or wrong arguments " << std::endl;
+    
+        throw std::invalid_argument("Unknown token");
     }
     return "";
 }

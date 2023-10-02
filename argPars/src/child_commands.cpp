@@ -14,15 +14,27 @@ double AddCommand :: execute(Op_Val_Pair_List& args) {
 }
 
 double SubCommand :: execute(Op_Val_Pair_List& args){
-    return 0;
+    std::vector<double> value_list;
+    for(auto p : args){
+        value_list.push_back(p.second);
+    }
+    return std::accumulate(std::next(value_list.begin()), value_list.end(), value_list[0], std::minus<float>());
 }
 
 double MulCommand :: execute(Op_Val_Pair_List& args){
-    return 0;
+    std::vector<double> value_list;
+    for(auto p : args){
+        value_list.push_back(p.second);
+    }
+    return std::accumulate(value_list.begin(), value_list.end(), 1.0, std::multiplies<float>());
 }
 
 double DivCommand :: execute(Op_Val_Pair_List& args){
-    return 0;
+    std::vector<double> value_list;
+    for(auto p : args){
+        value_list.push_back(p.second);
+    }
+    return std::accumulate(std::next(value_list.begin()), value_list.end(), value_list[0], std::divides<float>());
 }
 
 double Help :: execute(Op_Val_Pair_List& args){
@@ -30,5 +42,5 @@ double Help :: execute(Op_Val_Pair_List& args){
 }
 
 double Exit :: execute(Op_Val_Pair_List& args){
-    return 0;
+    std::exit(0);
 }
