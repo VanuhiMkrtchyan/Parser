@@ -42,6 +42,10 @@ void Shape::set_shape(Enum_Shape eShape)
 	case Enum_Shape::Circular:
 		str_shape = "Circle";
 		break;
+	case Enum_Shape::Text:
+		str_shape = "Text";
+		break;
+	
 	default:
 		str_shape = "None";
 		break;
@@ -58,6 +62,8 @@ void Shape::set_shape(std::string const& sShape)
 		e_shape = Enum_Shape::Triangle;
 	else if (sShape == "Circle")
 		e_shape = Enum_Shape::Circular;
+	else if (sShape == "Text")
+		e_shape = Enum_Shape::Text;
 	else
 		e_shape = Enum_Shape::None;
 }

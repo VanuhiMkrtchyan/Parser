@@ -15,6 +15,7 @@ public:
 		Rectangle,
 		Triangle,
 		Circular,
+		Text
 	};
 
 	explicit Shape(Enum_Shape);
