@@ -19,9 +19,6 @@ public:
 	virtual void Draw(Shape const&, double x1, double y1, double x2, double y2, QColor = Qt::blue) = 0;
 	virtual void Draw(Shape const&, QPointF const& p1, QPointF const& p2, QColor = Qt::blue) = 0;
 
-	virtual void DrawLine(double x1, double y1, double x2, double y2, QColor = Qt::blue) = 0;
-	virtual void DrawLine(QPointF const& p1, QPointF const& p2, QColor = Qt::blue) = 0;
-
 	virtual void DrawRect(double x1, double y1, double x2, double y2, QColor = Qt::blue) = 0;
 	virtual void DrawRect(QPointF const& p1, QPointF const& p2, QColor = Qt::blue) = 0;
 
